@@ -1,0 +1,42 @@
+package org.Step_Definition;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class AddCustomer {
+
+
+@Given("he user is in Telecom home page")
+public void he_user_is_in_Telecom_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+@Given("The User click an add Customer")
+public void the_User_click_an_add_Customer() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+@When("The User is filling all the details{string},{string},{string},{string},{string}")
+public void the_User_is_filling_all_the_details(String string, String string2, String string3, String string4, String string5) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+@When("The User Click on Submit Button")
+public void the_User_Click_on_Submit_Button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+@Then("The Customer Id Generated Sucessfully")
+public void the_Customer_Id_Generated_Sucessfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+
+	
+}

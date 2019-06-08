@@ -1,0 +1,18 @@
+
+@tag
+Feature: To Test add traffic plan 
+  
+
+ 
+
+  @tag2
+  Scenario Outline: 
+    Given the user navigate to add customer page
+    When The user fill in the valid details 
+    And The User Click on Submit Button
+    Then The user see the congradulation message
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |

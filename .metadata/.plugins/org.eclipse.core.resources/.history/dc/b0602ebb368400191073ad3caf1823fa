@@ -1,0 +1,13 @@
+Feature: To Test add Customer Functionality
+
+  @tag2
+  Scenario Outline: To test you add Customer sucessfully and generate customer ID
+    Given The user is in Telecom home page
+    And The User click an add Customer
+    When The User is filling all the details
+    Then The User Click on Submit Button
+
+    Examples: 
+      | FName | LName   | Email         | Address         | Mobile   |
+      | kalai | selvan  | 123@gmail.com | 123,West street | 98765678 |
+      | name2 | jasmine | 34@gmail.com  | 12,North Street |   967856 |

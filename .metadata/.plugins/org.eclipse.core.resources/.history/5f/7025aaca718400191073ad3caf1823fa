@@ -1,0 +1,46 @@
+package org.Step_Definition;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class AddTraffic {
+	static WebDriver driver;
+	@Given("the user navigate to add customer page")
+	public void the_user_navigate_to_add_customer_page() {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\USER\\eclipse-workspace-updated\\Cucumber\\CucumberTest\\Driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://demo.guru99.com/telecom/index.html");
+		driver.findElement(By.xpath("//a[text()='Add Tariff Plan']")).click();
+	}
+
+	
+
+@When("The user fill in the valid details{string},{string},{string},{string},{string},{string},{string}")
+public void the_user_fill_in_the_valid_details(String Monrent, String FreeLocmin, String FreeIntmin, String FreeSms, String LMincharge, String IMinccharge, String Sms) {
+	driver.findElement(By.id("rental1")).sendKeys(Monrent);
+	driver.findElement(By.id("local_minutes")).sendKeys(FreeLocmin);
+	driver.findElement(By.id("inter_minutes")).sendKeys(FreeIntmin);
+	driver.findElement(By.id("sms_pack")).sendKeys(FreeSms);
+	driver.findElement(By.id("minutes_charges")).sendKeys(LMincharge);
+	driver.findElement(By.id("inter_charges")).sendKeys(IMinccharge);
+	driver.findElement(By.id("sms_charges")).sendKeys(Sms);
+
+}
+
+
+
+	@Then("The user see the congradulation message")
+	public void the_user_see_the_congradulation_message() {
+		Assert.assertTrue(driver.findElement(By.xpath("//h2[text()='Congratulation you add Tariff Plan']")).isDisplayed());
+	}
+
+
+
+}

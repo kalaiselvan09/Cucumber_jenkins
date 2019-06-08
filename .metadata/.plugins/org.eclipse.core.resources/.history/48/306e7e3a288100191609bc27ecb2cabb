@@ -1,0 +1,44 @@
+package com.steps_defintion;
+
+import org.openqa.selenium.WebDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class AddCustomer {
+	static WebDriver driver;
+@Given("The user is in Telecom home page")
+public void the_user_is_in_Telecom_home_page() {
+	 System.setProperty("webdriver.chrome.driver","C:\\Users\\USER\\eclipse-workspace-updated\\Cucumber\\CucumberTest\\Driver\\chromedriver.exe");
+	
+    throw new cucumber.api.PendingException();
+}
+
+@Given("The User click an add Customer")
+public void the_User_click_an_add_Customer() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+@When("The User Click On submit Button")
+public void the_User_Click_On_submit_Button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+@When("The User Click on Submit Button")
+public void the_User_Click_on_Submit_Button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+@Then("The User's customer id should displayed in the screen")
+public void the_User_s_customer_id_should_displayed_in_the_screen() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+
+
+}

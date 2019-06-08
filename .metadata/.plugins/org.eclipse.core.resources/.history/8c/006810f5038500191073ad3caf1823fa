@@ -1,0 +1,18 @@
+package org.Step_Definition;
+
+public class PayBilling {
+	
+
+@Given("The user is in paybilling page")
+public void the_user_is_in_paybilling_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+@Then("To verify the paybilling page match with customer name")
+public void to_verify_the_paybilling_page_match_with_customer_name() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+}
+
+}

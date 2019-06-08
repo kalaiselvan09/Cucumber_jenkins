@@ -1,0 +1,27 @@
+package org.Step_Definition;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+
+public class PayBilling {
+	
+
+@Given("The user is in paybilling page")
+public void the_user_is_in_paybilling_page() {
+	
+	Hooks.driver.findElement(By.xpath("//a[text()='Pay Billing']")).click();
+	Hooks.driver.findElement(By.id("customer_id")).sendKeys("037217");
+	Hooks.driver.findElement(By.name("submit")).click();
+    
+}
+
+@Then("To verify the paybilling page match with customer name")
+public void to_verify_the_paybilling_page_match_with_customer_name() {
+	Assert.assertTrue(
+			Hooks.driver.findElement(By.xpath("//h2[text()='Congratulation you add Tariff Plan']")).isDisplayed());
+}
+
+}

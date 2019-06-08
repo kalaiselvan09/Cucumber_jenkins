@@ -1,0 +1,59 @@
+package com.Step_definition;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
+import junit.framework.Assert;
+
+public class AddTrafficPlan {
+
+	static WebDriver driver;
+
+	@Given("When the user navigate to add customer page")
+
+	public void when_the_user_navigate_to_add_customer_page() {
+
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\USER\\eclipse-workspace-updated\\Cucumber\\CucumberTest\\Driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://demo.guru99.com/telecom/index.html");
+		driver.findElement(By.xpath("//a[text()='Add Tariff Plan']")).click();
+
+	}
+
+	@When("The user fill in the valid details")
+	public void the_user_fill_in_the_valid_details(DataTable cdetails) {
+		
+		List<String> cdetails1 = cdetails.asList(String.class);
+		
+		
+		driver.findElement(By.id("rental1")).sendKeys(cdetails1.get(0));
+		driver.findElement(By.id("local_minutes")).sendKeys(cdetails1.get(1));
+		driver.findElement(By.id("inter_minutes")).sendKeys(cdetails1.get(2));
+		driver.findElement(By.id("sms_pack")).sendKeys(cdetails1.get(3));
+		driver.findElement(By.id("minutes_charges")).sendKeys(cdetails1.get(4));
+		driver.findElement(By.id("inter_charges")).sendKeys(cdetails1.get(5));
+		driver.findElement(By.id("sms_charges")).sendKeys(cdetails1.get(6));
+
+	}
+
+	@When("The user click the submit button")
+	public void the_user_click_the_submit_button() {
+		driver.findElement(By.name("submit")).click();
+	}
+
+	@Then("The user see the congradulation message")
+	public void the_user_see_the_congradulation_message() {
+		
+	Assert.assertTrue(driver.findElement(By.xpath("//h2[text()='Congratulation you add Tariff Plan']")).isDisplayed());
+		
+	}
+
+}

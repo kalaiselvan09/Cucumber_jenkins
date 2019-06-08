@@ -1,0 +1,22 @@
+package org.Step_Definition;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+
+public class Hooks {
+
+	@Before
+	public void method1() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	@After
+	public void method2() {
+		
+		
+
+	}
+	
+	
+}
